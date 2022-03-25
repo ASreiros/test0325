@@ -28,12 +28,12 @@ const grauztukai = new Map()
 class Krepsys{
     static vaisiai = []
     static pripildyti(){
-        this.vaisiai = []; //sita eilute uztikrina, kad paleidus metoda gausim butent 20 nauju vaisiu. Jei paleisim 2 karta, gausim 20 kitokiu, o ne +20 vaisiu. 
+        this.vaisiai = []; //sita eilute uztikrina, kad paleidus metoda gausim butent 20 nauju vaisiu. Jei paleisim 2 karta, gausim 20 kitokiu, o ne +20 vaisiu. Galima buvo ideti if patikrinima, bet tada kila klausimas kas viksta kai yra 17 vaisiu. Todel tiesiog naujus 20. 
         for (let i = 0; i < 20; i++) {
             const element = new Vaisius
             this.vaisiai.push(element)
         }
-        this.rusioti()   
+        this.rusioti()   // paleidzia metoda, kuris isrusioja masyva
     }
 
     // metodas rusioti yra pagalbinis, ji paleidzia kiti metodai, kad isrusioti masyva. Kadangi mano manymu rusioti reikia 2 kartus, naudoju papildoma funkcija
